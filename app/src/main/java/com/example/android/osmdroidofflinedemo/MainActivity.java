@@ -10,7 +10,7 @@ import org.osmdroid.views.MapView;
 
 public class MainActivity extends Activity {
 
-    public static final GeoPoint BERLIN = new GeoPoint(52.516667, 13.383333);
+    public static final GeoPoint GLODON = new GeoPoint(40.044771, 116.277071);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,12 +21,12 @@ public class MainActivity extends Activity {
         mapView.setClickable(true);
         mapView.setBuiltInZoomControls(true);
         mapView.setMultiTouchControls(true);
-        mapView.setUseDataConnection(true);
+        mapView.setUseDataConnection(false);
         mapView.setTileSource(TileSourceFactory.MAPQUESTOSM);
 
         IMapController mapViewController = mapView.getController();
         mapViewController.setZoom(15);
-        mapViewController.setCenter(BERLIN);
+        mapViewController.setCenter(GLODON);
     }
 
 }

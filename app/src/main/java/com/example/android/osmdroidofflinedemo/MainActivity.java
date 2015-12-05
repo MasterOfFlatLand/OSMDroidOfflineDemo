@@ -22,7 +22,9 @@ public class MainActivity extends Activity {
         mapView.setBuiltInZoomControls(true);
         mapView.setMultiTouchControls(true);
         mapView.setUseDataConnection(false);
-        mapView.setTileSource(TileSourceFactory.MAPQUESTOSM);
+        mapView.setMaxZoomLevel(null);
+        // attention!!: need to rename tile folder in .zip file to "CycleMap";
+        mapView.setTileSource(TileSourceFactory.CYCLEMAP);
 
         IMapController mapViewController = mapView.getController();
         mapViewController.setZoom(15);
